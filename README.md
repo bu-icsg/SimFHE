@@ -16,3 +16,11 @@ The parameters computed by SimFHE include the high-level ring parameters such as
 SimFHE can help answer questions like how changing a specific CKKS algorithm parameter or system constraint such as on-chip memory size would affect the overall bootstrapping performance. 
 This, in turn, helps save significant design and development time.
 Moreover, the security level constraints limit the number of possible parameter sets, so the optimal parameter search takes only a few minutes.
+
+Organization of the Repo:
+1) params.py - Add/Modify all the architectural and scheme-related parameters in this file.
+2) perf_counter.py - Accounts for the operation count and data transfers from main memory.
+3) experiment.py - Run this script to execute the various benchmarks. It imports params.py and perf_counter.py script files.
+4) evaluator.py - Defines all primitive operations in the CKKS FHE scheme.
+
+You will need Python3 or up to run various scripts in this repo.
