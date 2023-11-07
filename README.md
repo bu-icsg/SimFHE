@@ -13,6 +13,6 @@ In addition, many of these optimizations are memory-aware, and so for a large en
 SimFHE also helps in optimal parameter selection by combining the simulation of algorithmic optimizations and hardware constraints. 
 Given the on-chip memory size, SimFHE searches the CKKS parameter space using a brute-force approach to find the optimal parameters that maximize the bootstrapping throughput for a given underlying compute system. 
 The parameters computed by SimFHE include the high-level ring parameters such as the polynomial degree and coefficient modulus as well as the low-level, internal bootstrapping parameters such as the number of FFT iterations (fftIter) and the number of digits (dnum) in the KeySwitch operation. 
-SimFHE can help answer the questions like how changing a specific CKKS algorithm parameter or system constraint such as on-chip memory size would affect the overall bootstrapping performance. 
+SimFHE can help answer questions like how changing a specific CKKS algorithm parameter or system constraint such as on-chip memory size would affect the overall bootstrapping performance. 
 This, in turn, helps save significant design and development time.
 Moreover, the security level constraints limit the number of possible parameter sets, so the optimal parameter search takes only a few minutes.
