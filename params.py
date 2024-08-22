@@ -6,6 +6,19 @@ from math import ceil, log2
 from enum import Enum
 from multiprocessing.sharedctypes import Value
 
+@dataclass
+class LimbsContext:
+    limbs : int
+
+class ConfigParam:
+    def __init__(self,**kwargs):
+        self.N = 2**16
+        self.limbs = 47
+        self.exp_img_ctxt = LimbsContext(limbs=32)
+        self.slot_coeff_ctxt = LimbsContext(limbs=19)
+        for k,v in kwargs.items():
+            setattr(self,k,v)
+
 
 @total_ordering
 class CacheStyle(Enum):
